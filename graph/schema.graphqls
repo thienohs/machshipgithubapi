@@ -1,0 +1,25 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type GithubUserInfo {
+  name: String
+	login: String
+	company: String
+	followers: Int
+	public_repos: Int
+	avg_followers_per_public_repo: Float
+}
+
+type ResultError {
+  message: String
+}
+
+type ResultRetrieveUsers {
+  users: [GithubUserInfo!]!
+  errors: [ResultError!]!
+}
+
+type Query {
+  retrieveUsers(usernames: [String]): ResultRetrieveUsers
+}
