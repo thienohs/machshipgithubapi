@@ -10,14 +10,24 @@ GITHUB_API_USER: Github API User path (default: users)
 ## HTTP GET query
 ```
 curl -L \
-  "http://localhost:8777/retrieveUsers?usernames=google,apache,kubernetes"
+  "http://localhost:8777/retrieveUsers?usernames=machship,google,apache,kubernetes"
+```
+
+Demo:
+```
+curl -L \
+  "https://machship.gevelation.com/retrieveUsers?usernames=machship,google,apache,kubernetes"
 ```
 
 ## GraphQL query
 ### Playground: 
 http(s)://[host]:[port]/graphql/playground
+
+Demo: https://machship.gevelation.com/graphql/playground
 ### Query: 
 http(s)://[host]:[port]/graphql/query
+
+Demo: https://machship.gevelation.com/graphql/query
 ### Examples query:
 ```
 query retrieveUsers {
