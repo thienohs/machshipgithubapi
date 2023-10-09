@@ -142,7 +142,7 @@ func (s *Server) retrieveUsers(w http.ResponseWriter, r *http.Request) {
 
 	// Sort users data
 	sort.SliceStable(resultObj.Users, func(i, j int) bool {
-		return strings.Compare(resultObj.Users[i].Login, resultObj.Users[j].Login) < 0
+		return strings.Compare(resultObj.Users[i].Name, resultObj.Users[j].Name) < 0
 	})
 
 	// Write response (pretty JSON format)
